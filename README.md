@@ -30,6 +30,18 @@ patch('Faces', f, 'Vertices', v, ...
 
 Now, we scatter a couple hundred random points, and test which polygons they fall into.
 
+```matlab
+x = 10 * rand(200,1); 
+y = 10 * rand(200,1);
+
+[in, index] = inpolygons(x, y, xv, yv);
+index = cell2mat(index);  % No overlapping polygons allows this.
+
+plot(x(in), y(in), 'r.', x(~in), y(~in), 'b.');
+plot(x(index==1), y(index==1), 'go', x(index==2), y(index==2), 'mo');
+```
+
+
 ![inpolygons2](inpolygons_readme_02.png)
 
 
