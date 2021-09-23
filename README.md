@@ -1,4 +1,6 @@
 ## inpolygons.m Documentation
+Author: Kelly Kearney 
+[![View inpolygons on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/7187-inpolygons)
 
 This function checks whether a point or points is inside one or more polygons.
 The polygons can have holes in them.  When dealing with a large number of points and/or polygons, this can be faster that inpolygon.m.
